@@ -7,6 +7,10 @@ No version has been released yet. So you need to import the project into Intelli
 
 Check below video for instruction on how to use.
 
+https://github.com/hiddeneyes02/android_xml_translator/assets/9453054/680ac441-0c61-41ac-8eaa-c15ecd93c9aa
+
+
+
 ## Steps
 
 1- Run the project

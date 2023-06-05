@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dzboot.android_translator.MainController">
+    <VBox prefHeight="200.0" prefWidth="100.0">
+        <Label text="Origin XML">
+            <VBox.margin>
+                <Insets bottom="4.0" left="4.0" top="4.0" />
+            </VBox.margin>
+        </Label>
+        <TextArea fx:id="origin" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" wrapText="true">
+            <VBox.margin>
+                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </VBox.margin>
+        </TextArea>
+        <Label fx:id="originLabel" />
+    </VBox>
+    <VBox maxWidth="-Infinity" minWidth="-Infinity" prefWidth="120.0" HBox.hgrow="NEVER">
+        <Button layoutX="18.0" layoutY="59.0" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#pasteToOrigin" prefWidth="80.0" text="&lt;-- Paste">
+            <VBox.margin>
+                <Insets bottom="8.0" left="8.0" top="8.0" />
+            </VBox.margin>
+        </Button>
+        <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#prepare" prefWidth="80.0" text="Prepare" VBox.vgrow="NEVER">
+            <VBox.margin>
+                <Insets bottom="8.0" left="8.0" top="8.0" />
+            </VBox.margin>
+        </Button>
+        <Button layoutX="18.0" layoutY="18.0" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#pasteToDest" prefWidth="80.0" text="Paste --&gt;">
+            <VBox.margin>
+                <Insets bottom="8.0" left="8.0" top="8.0" />
+            </VBox.margin>
+        </Button>
+        <CheckBox fx:id="toFile" mnemonicParsing="false" onAction="#toggleToFileTextArea" text="To file">
+            <VBox.margin>
+                <Insets left="8.0" right="8.0" top="8.0" />
+            </VBox.margin>
+        </CheckBox>
+        <TextField fx:id="langCode" editable="false" promptText="Language code">
+            <VBox.margin>
+                <Insets left="8.0" right="8.0" top="8.0" />
+            </VBox.margin>
+        </TextField>
+        <CheckBox fx:id="includeRoot" mnemonicParsing="false" selected="true" text="Include root">
+            <VBox.margin>
+                <Insets left="8.0" right="8.0" top="8.0" />
+            </VBox.margin>
+        </CheckBox>
+        <Button maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#convert" prefWidth="80.0" text="Convert" VBox.vgrow="NEVER">
+            <VBox.margin>
+                <Insets bottom="8.0" left="8.0" top="8.0" />
+            </VBox.margin>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#reset" text="Reset">
+            <VBox.margin>
+                <Insets bottom="16.0" left="8.0" top="16.0" />
+            </VBox.margin>
+        </Button>
+        <HBox.margin>
+            <Insets top="25.0" />
+        </HBox.margin>
+    </VBox>
+    <VBox prefHeight="200.0" prefWidth="100.0">
+        <Label text="Destination XML">
+            <VBox.margin>
+                <Insets bottom="4.0" left="4.0" top="4.0" />
+            </VBox.margin>
+        </Label>
+        <TextArea fx:id="destination" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" wrapText="true">
+            <VBox.margin>
+                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </VBox.margin>
+        </TextArea>
+        <Label fx:id="destLabel" />
+    </VBox>
+</HBox>
